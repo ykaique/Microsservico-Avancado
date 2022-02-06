@@ -1,0 +1,21 @@
+server:
+  port: 5555
+
+eureka:
+  client:
+    registery-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "routes"
+
+zuul:
+  sensitive-headers:
+    - Cookie, Authorization
